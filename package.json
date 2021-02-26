@@ -3,12 +3,16 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "dev": "vue-cli-service build --mode preproduction",
-    "build": "vue-cli-service build",
+    "serve:kcentr": "cross-env SITE_ID=6 vue-cli-service serve",
+    "serve:vseldom": "cross-env SITE_ID=5 vue-cli-service serve",
+    "dev:kcentr": "cross-env SITE_ID=6 vue-cli-service build --mode preproduction",
+    "dev:vseldom": "cross-env SITE_ID=5 vue-cli-service build --mode preproduction",
+    "build:kcentr": "cross-env SITE_ID=6 vue-cli-service build",
+    "build:vseldom": "cross-env SITE_ID=5 vue-cli-service build",
+    "lint:kcentr": "cross-env SITE_ID=6 vue-cli-service lint",
+    "lint:vseldom": "cross-env SITE_ID=5 vue-cli-service lint",
     "test:unit": "vue-cli-service test:unit",
-    "test:e2e": "vue-cli-service test:e2e --mode development",
-    "lint": "vue-cli-service lint"
+    "test:e2e": "vue-cli-service test:e2e --mode development"
   },
   "dependencies": {
     "bootstrap": "^4.5.0",
@@ -42,6 +46,7 @@
     "babel-eslint": "^10.1.0",
     "chai": "^4.1.2",
     "chromedriver": "^79.0.3",
+    "cross-env": "^7.0.3",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
     "geckodriver": "^1.19.1",
